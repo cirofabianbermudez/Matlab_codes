@@ -1,0 +1,26 @@
+- Funciones de MATLAB - 
+
+
+abs(Q)								Encontrar la magnitud de Q
+angle(Q)							Encontrar el ángulo de Q
+Pn = [1 2 3]						Polinomio s^2 + 2s + 3
+poly([-2 -5 -6])					Polinomio (s+2)(s+5)(s+6)
+roots(Pn)							Encontra raíces de polimonio Pn
+conv(P1,P2)							Multiplicar dos polinomios
+[K, r, c] = residue(num,den)		Expanción de fracciones parciales
+									K : residuo   r : raices   c : coeficientes
+Tn = tf(num,den)					Crea una funcion de transferencia
+G = zpk(rn,rd,k)					Funcion de transferencia con polos y ganancia
+									rn :Raices_num   rd:Raices_den   k:ganancia
+[z,p,k] = tf2zp(num,den)			Encontrar z:ceros p:polos y k:ganancia de tf				
+[n,d] = zp2tf(z',p',k)				Encuentra n:num y d:den para tf dados z,p,k
+
+Fzpk1 = zpk([-2 -4],[0 -3 -5],10)	Convertir zpk a tf
+Ftf1 = tf(Fzpk1)
+
+Ftf2 = tf([10 60 80],[1 8 15 0])	Convertir tf a zpk
+Fzpk2 = zpk(Ftf2)
+
+sys = ss(A,B,C,D)					Crea un objeto LTI (Linear Time Invariant)
+									objeto espacio de estados
+									
